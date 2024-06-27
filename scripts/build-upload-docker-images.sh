@@ -12,7 +12,7 @@ print_help() {
 }
 
 add_debugger='Y'
-platforms="linux/amd64,linux/s390x,linux/ppc64le,linux/arm64"
+platforms="linux/amd64,linux/arm64"
 LOCAL_FLAG=''
 
 while getopts "Dhlp:" opt; do
