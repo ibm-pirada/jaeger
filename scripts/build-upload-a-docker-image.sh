@@ -7,7 +7,7 @@ docker_file_arg="Dockerfile"
 target_arg=""
 local_test_only='N'
 platforms="linux/amd64"
-namespace="jaegertracing"
+namespace="earnpirada/jaegertracing"
 
 while getopts "lbc:d:f:p:t:" opt; do
 	# shellcheck disable=SC2220 # we don't need a *) case

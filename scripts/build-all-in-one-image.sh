@@ -105,5 +105,5 @@ if [[ "${add_debugger}" == "Y" ]]; then
   run_integration_test "localhost:5000/$repo"
 
   # build & upload official image
-  bash scripts/build-upload-a-docker-image.sh ${LOCAL_FLAG} -b -c "${BINARY}-debug" -d "cmd/${BINARY}" -t debug
+  # bash scripts/build-upload-a-docker-image.sh ${LOCAL_FLAG} -b -c "${BINARY}-debug" -d "cmd/${BINARY}" -t debug
 fi
