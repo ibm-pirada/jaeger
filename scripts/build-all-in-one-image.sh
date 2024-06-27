@@ -13,7 +13,7 @@ print_help() {
 }
 
 add_debugger='Y'
-platforms="linux/amd64,linux/arm64"
+platforms="linux/amd64"
 LOCAL_FLAG=''
 BINARY='all-in-one'
 
