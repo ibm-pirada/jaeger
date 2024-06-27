@@ -82,11 +82,11 @@ for platform in $(echo "$platforms" | tr ',' ' '); do
   make "build-${BINARY}" GOOS=linux GOARCH="${arch}"
 done
 
-if [[ "${add_debugger}" == "N" ]]; then
-  make create-baseimg
-else
-  make create-baseimg-debugimg
-fi
+# if [[ "${add_debugger}" == "N" ]]; then
+#   make create-baseimg
+# else
+#   make create-baseimg-debugimg
+# fi
 
 # build all-in-one image locally for integration test (the -l switch)
 # bash scripts/build-upload-a-docker-image.sh -l -b -c "${BINARY}" -d "cmd/${BINARY}" -p "${platforms}" -t release
