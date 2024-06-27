@@ -34,6 +34,6 @@ if [ "${MAJOR}x" != "x" ]; then
     IMAGE_TAGS="${IMAGE_TAGS} --tag docker.io/${MAJOR_IMAGE} --tag quay.io/${MAJOR_IMAGE}"
 fi
 
-IMAGE_TAGS="--tag docker.io/earnpirada/jaegertracing/all-in-one:latest"
+IMAGE_TAGS="--tag docker.io/${BASE_BUILD_IMAGE} --tag docker.io/${BUILD_IMAGE}"
 
 echo "${IMAGE_TAGS}"
