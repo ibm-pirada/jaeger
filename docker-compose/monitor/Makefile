@@ -3,7 +3,7 @@ build: clean-jaeger
 	cd ../../ && make build-all-in-one-linux
 	cd ../../ && make create-baseimg PLATFORMS=linux/$(shell go env GOARCH)
 	cd ../../ && docker buildx build --target release \
-		--tag jaegertracing/all-in-one:dev \
+		--tag earnpirada/jaegertracing/all-in-one:dev \
 		--build-arg base_image=localhost:5000/baseimg_alpine:latest \
 		--build-arg debug_image=not-used \
 		--build-arg TARGETARCH=$(shell go env GOARCH) \
@@ -24,8 +24,8 @@ clean-jaeger:
 
 .PHONY: clean-all
 clean-all: clean-jaeger
-	docker rmi -f jaegertracing/all-in-one:dev ; \
-	docker rmi -f jaegertracing/all-in-one:latest ; \
+	docker rmi -f earnpirada/jaegertracing/all-in-one:dev ; \
+	docker rmi -f earnpirada/jaegertracing/all-in-one:latest ; \
 	docker rmi -f otel/opentelemetry-collector-contrib:latest ; \
 	docker rmi -f prom/prometheus:latest ; \
 	docker rmi -f grafana/grafana:latest
