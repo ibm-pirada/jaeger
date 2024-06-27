@@ -3,7 +3,7 @@ VERSION := 1.0.0
 DOCKER_REGISTRY ?= localhost:5000
 BASE_IMAGE ?= $(DOCKER_REGISTRY)/baseimg_alpine:latest
 DEBUG_IMAGE ?= $(DOCKER_REGISTRY)/debugimg_alpine:latest
-PLATFORMS ?= linux/amd64,linux/s390x,linux/ppc64le,linux/arm64
+PLATFORMS ?= linux/amd64,linux/arm64
 
 create-baseimg-debugimg: create-baseimg create-debugimg
 
