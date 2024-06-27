@@ -57,5 +57,6 @@ jobs:
       # -d: include images with debugger
       run: bash scripts/build-upload-docker-images.sh
       env:
+        DOCKERHUB_USERNAME: earnpirada
         DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
         QUAY_TOKEN: ${{ secrets.QUAY_TOKEN }}
