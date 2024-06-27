@@ -6,7 +6,7 @@ on:
 
   pull_request:
     branches: [main]
-    
+
   workflow_dispatch:
 
 concurrency:
@@ -78,5 +78,6 @@ jobs:
       env:
         DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
         QUAY_TOKEN: ${{ secrets.QUAY_TOKEN }}
+        DOCKERHUB_USERNAME: earnpirada
         # SKIP_SAMPLING is used by integration tests, see https://github.com/jaegertracing/jaeger/issues/5531
         SKIP_SAMPLING: ${{ matrix.mode.skip_sampling }}
